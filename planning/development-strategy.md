@@ -47,12 +47,45 @@ The `JS-study guide ` is designed on `FIGMA`
 
 ## 3.Variables and data types
 Assigned to kemy
+* Create a branch ` variables `
+* Write the codes in `variables.html` and `style.css`
+* Cover the topics 
+   * let, const, variable,swap,temp, compare,assert
 
-
-### Task B
-
-### Task ...
+## 4. Logical and Arithmatic operations
+Assigned to Bermarte
+ * Create a branch ` operations `
+ *  Write the codes in `operations.html` and `style.css`
+ * Cover the topics 
+   * and,or,not,arithmatic,conditions
+ 
+## 5. Loops
+Assigned to Divya
+  * Create a branch ` loops `
+  * Write the codes in ` loops.html ` and `style.css`
+  * Cover the topics
+      * while,break,continue,for,increment,decrement
+      
+ ## 6.Functions
+ 
+ Assigned to Burak
+ 
+    * Create a branch ` functions `
+    * Write the codes in `functions.html ` and `style.css`
+    * Cover the topics
+        * function, return types
+        
+  ## 7.Interact
+  
+  Assigned to Chiok
+  
+    * Create a branch `alert `
+    * Write  the codes in `alert.html` and `style.css`
+    * Cover the topics
+      * alert, prompt
+      
+ ## 8.Finishing touch
 
 ---
 
-## ...
+## ..
