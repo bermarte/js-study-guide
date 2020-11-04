@@ -19,6 +19,16 @@
 ## 0.Setup
 
 ---
+Assigned to Divya Sree
+> branch:main
+ * JS-study guide repo is forked from HackYourFutureBelgium repository
+ * Add the licence
+ * Add collaborators
+ * Create a README
+ * Turn on GitHub Pages
+ * Write a development strategy
+ * Translate the strategy into issues
+
 
 ## 1. Initialize Application
 
