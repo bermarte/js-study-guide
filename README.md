@@ -16,4 +16,4 @@ For UX-UI Designing this project using FIGMA.
 ## Contributions
 Pull requests and helps are most welcome.
 ## Licence
-[MIT]()
+[MIT](https://github.com/DIVYASREE345/js-study-guide/blob/master/LICENSE)
