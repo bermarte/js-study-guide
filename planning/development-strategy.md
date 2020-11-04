@@ -35,7 +35,7 @@ Assigned to Divya Sree
 
 The `JS-study guide ` is designed on `FIGMA`
 * Create the figma file
-* Create the layout (Home, Tutorials, Exercises, About us)
+* Create the layout
 * Design each section
 
 ## 2.Index page
