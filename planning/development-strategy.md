@@ -70,19 +70,19 @@ Assigned to Divya
  
  Assigned to Burak
  
-    * Create a branch ` functions `
-    * Write the codes in `functions.html ` and `style.css`
-    * Cover the topics
+   * Create a branch ` functions `
+   * Write the codes in `functions.html ` and `style.css`
+   * Cover the topics
         * function, return types
         
   ## 7.Interact
   
   Assigned to Chiok
   
-    * Create a branch `alert `
-    * Write  the codes in `alert.html` and `style.css`
-    * Cover the topics
-      * alert, prompt
+   *  Create a branch `alert `
+   *  Write  the codes in `alert.html` and `style.css`
+   *  Cover the topics
+       * alert, prompt
       
  ## 8.Finishing touch
 
