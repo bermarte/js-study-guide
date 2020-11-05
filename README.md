@@ -15,5 +15,5 @@ For UX-UI Designing this project using FIGMA.
 * CSS3
 ## Contributions
 Pull requests and helps are most welcome.
-## Licence
+## License
 [MIT](https://github.com/DIVYASREE345/js-study-guide/blob/master/LICENSE)
