@@ -22,7 +22,7 @@
 Assigned to Divya Sree
 > branch:main
  * JS-study guide repo is forked from HackYourFutureBelgium repository
- * Add the licence
+ * Add the license
  * Add collaborators
  * Create a README
  * Turn on GitHub Pages
@@ -42,29 +42,35 @@ The `JS-study guide ` is designed on `FIGMA`
 
 - This user story is developed on branch `index`.
 - This branch is merged to `master` branch after completion.
-* Index page consists of a brief introduction on java script (history, importances,uses)
+* Index page consists of a brief introduction on java script (history, importances, uses)
 * `Index.HTML` Consist of necessary html codes and `style.css` for style codes
 
 ## 3.Variables and data types
+
 Assigned to kemy
+
 * Create a branch ` variables `
 * Write the codes in `variables.html` and `style.css`
 * Cover the topics 
-   * let, const, variable,swap,temp, compare,assert
+   * let, const, variable, swap, temp, compare, assert
 
 ## 4. Logical and Arithmatic operations
+
 Assigned to Bermarte
+
  * Create a branch ` operations `
  *  Write the codes in `operations.html` and `style.css`
  * Cover the topics 
-   * and,or,not,arithmatic,conditions
+   * and, or, not, arithmetic, conditions
  
 ## 5. Loops
+
 Assigned to Divya
+
   * Create a branch ` loops `
   * Write the codes in ` loops.html ` and `style.css`
   * Cover the topics
-      * while,break,continue,for,increment,decrement
+      * while, break, continue, for, increment, decrement
       
  ## 6.Functions
  
