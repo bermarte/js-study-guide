@@ -3,7 +3,9 @@
 ----
 ## General Info
 Aim of this project is to design and build a javascript tutorial for beginners using HTML and CSS in two weeks covering all the necessary topics.
-For UX-UI Designing this project using FIGMA.
+For UX-UI Designing this project using FIGMA.    
+[development strategy](planning/development-strategy.md)   
+[backlog](planning/backlog.md)   
 ## Group Members
 * [Bermarte](https://github.com/bermarte)
 * [Burak](https://github.com/businan)
