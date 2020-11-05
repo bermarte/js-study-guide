@@ -47,14 +47,14 @@ The `JS-study guide ` is designed on `FIGMA`
 
 ## 3.Variables and data types
 
-Assigned to kemy
+Assigned to Kemy
 
 * Create a branch ` variables `
 * Write the codes in `variables.html` and `style.css`
 * Cover the topics 
    * let, const, variable, swap, temp, compare, assert
 
-## 4. Logical and Arithmatic operations
+## 4. Logic and Arithmetic
 
 Assigned to Bermarte
 
