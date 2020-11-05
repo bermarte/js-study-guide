@@ -33,6 +33,8 @@ Assigned to Divya Sree
 
 ## 1. Design
 
+Assigned to the group, each member will create their own page
+
 The `JS-study guide ` is designed on `FIGMA`
 * Create the figma file
 * Create the layout
@@ -43,14 +45,14 @@ The `JS-study guide ` is designed on `FIGMA`
 - This user story is developed on branch `index`.
 - This branch is merged to `master` branch after completion.
 * Index page consists of a brief introduction on java script (history, importances, uses)
-* `Index.HTML` Consist of necessary html codes and `style.css` for style codes
+* `Index.html` Consist of necessary html codes and `style.css` for style codes
 
 ## 3.Variables and data types
 
 Assigned to Kemy
 
 * Create a branch ` variables `
-* Write the codes in `variables.html` and `style.css`
+* Write the code in `variables.html` and `style.css`
 * Cover the topics 
    * let, const, variable, swap, temp, compare, assert
 
@@ -59,7 +61,7 @@ Assigned to Kemy
 Assigned to Bermarte
 
  * Create a branch ` operations `
- *  Write the codes in `operations.html` and `style.css`
+ *  Write the code in `operations.html` and `style.css`
  * Cover the topics 
    * and, or, not, arithmetic, conditions
  
@@ -68,7 +70,7 @@ Assigned to Bermarte
 Assigned to Divya
 
   * Create a branch ` loops `
-  * Write the codes in ` loops.html ` and `style.css`
+  * Write the code in ` loops.html ` and `style.css`
   * Cover the topics
       * while, break, continue, for, increment, decrement
       
@@ -77,7 +79,7 @@ Assigned to Divya
  Assigned to Burak
  
    * Create a branch ` functions `
-   * Write the codes in `functions.html ` and `style.css`
+   * Write the code in `functions.html ` and `style.css`
    * Cover the topics
         * function, return types
         
@@ -86,7 +88,7 @@ Assigned to Divya
   Assigned to Chiok
   
    *  Create a branch `alert `
-   *  Write  the codes in `alert.html` and `style.css`
+   *  Write  the code in `alert.html` and `style.css`
    *  Cover the topics
        * alert, prompt
       
