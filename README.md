@@ -1,5 +1,5 @@
 # JS-Study Guide
-> JAVA SCRIPT Study guide for beginners created using HTML and CSS
+> JAVASCRIPT Study guide for beginners created using HTML and CSS
 ----
 ## General Info
 Aim of this project is to design and build a javascript tutorial for beginners using HTML and CSS in two weeks covering all the necessary topics.
@@ -13,9 +13,10 @@ For UX-UI Designing this project using FIGMA.
 * [Divya](https://github.com/DIVYASREE345)
 * [Kemy](https://github.com/kemmy72)
 ## Technologies
+* Figma
 * HTML5
 * CSS3
 ## Contributions
-Pull requests and helps are most welcome.
+Pull requests and help are most welcome.
 ## License
 [MIT](https://github.com/DIVYASREE345/js-study-guide/blob/master/LICENSE)
