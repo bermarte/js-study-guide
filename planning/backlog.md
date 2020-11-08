@@ -30,7 +30,6 @@ As __ so that __
 - [ ] As a user I should be able to use while and for loops
 - [ ] As a user I must be able to use break and continue statements
 - [ ] As a user I should be able to increment and decrement a number (prefix and postfix)
-- [ ] As a user I should be able to increment and decrement a number (prefix and postfix)
 - [ ] As a user I should know how to write and read functions
 - [ ] As a user I should know what are the good-practice related to functions
 - [ ] As a user I should know what a callstack is
