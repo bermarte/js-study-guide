@@ -1,6 +1,27 @@
-# JavaScript Quiz
+# JavaScript Study Guide
 
-...
+From [HYF](https://github.com/HackYourFutureBelgium/debugging#after-class-1)   
+
+This is the beginning of a two-week project. Each group will plan and build their own JS Study Guide using this starter repository. The project will be written using only HTML & CSS. You will need to write some JavaScript for this project, but all the code you write will be examples and exercises like in this Debugging repository. You are not expected to use JavaScript for DOM Manipulation, or any other type of interactivity.
+
+To help you build an interactive study guide, the repository comes with a custom HTML element <code-along src='./path/to/file.js'></code-along>. Using this component you will be able to embed interactive code snippets much like the study-lenses exercises. If you're looking for a good way to organize your topics, consider having these 4 sections for each:
+
+    Essence: present in 2-3 sentences what you will cover and why you need to know it.
+    Examples: present a couple examples of this concept with simple code snippets
+    Explanation: explain how the code examples work, and the rules behind them
+    Exercises: provide a few exercises to practice applying the concept
+
+It's time for some UX & UI! Take your time in the first week to plan and design your study guide for the best study experience possible. Your study guide can include anything you think will be helpful:
+
+    Explanations
+    Diagrams
+    Links
+    Code Snippets
+    Embedded Videos
+    ... Anything goes!
+
+check the [complete repo](https://github.com/HackYourFutureBelgium/debugging)
+
 
 ---
 
@@ -12,7 +33,7 @@
 
 ## WIREFRAME
 
-![wireframe]()
+![wireframe](https://www.figma.com/file/jpEckKDjkbLQ9xvn9r5bQ8/class-11%2612-4?node-id=469%3A299)
 
 ---
 
@@ -44,7 +65,7 @@ The `JS-study guide ` is designed on `FIGMA`
 
 - This user story is developed on branch `index`.
 - This branch is merged to `master` branch after completion.
-* Index page consists of a brief introduction on java script (history, importances, uses)
+* Index page consists of a brief introduction on JavaScript (history, importances, uses)
 * `Index.html` Consist of necessary html codes and `style.css` for style codes
 
 ## 3.Variables and data types
