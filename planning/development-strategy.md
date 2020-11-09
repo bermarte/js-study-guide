@@ -33,11 +33,14 @@ check the [complete repo](https://github.com/HackYourFutureBelgium/debugging)
 
 ## WIREFRAME
 
-![wireframe](https://www.figma.com/file/jpEckKDjkbLQ9xvn9r5bQ8/class-11%2612-4?node-id=469%3A299)
+![wireframe](wireframe.png)   
+
+[figma wireframe](https://www.figma.com/file/jpEckKDjkbLQ9xvn9r5bQ8/class-11%2612-4?node-id=469%3A299)    
+[figma prototype](https://www.figma.com/proto/jpEckKDjkbLQ9xvn9r5bQ8/class-11%2612-4?node-id=287%3A140&scaling=min-zoom)    
 
 ---
 
-## 0.Setup
+## 0. Setup
 
 ---
 Assigned to Divya Sree
@@ -61,14 +64,14 @@ The `JS-study guide ` is designed on `FIGMA`
 * Create the layout
 * Design each section
 
-## 2.Index page
+## 2. Index page
 
 - This user story is developed on branch `index`.
 - This branch is merged to `master` branch after completion.
 * Index page consists of a brief introduction on JavaScript (history, importances, uses)
 * `Index.html` Consist of necessary html codes and `style.css` for style codes
 
-## 3.Variables and data types
+## 3. Variables and data types
 
 Assigned to Kemy
 
@@ -104,7 +107,7 @@ Assigned to Divya
    * Cover the topics
         * function, return types
         
-  ## 7.Interact
+  ## 7. Interact
   
   Assigned to Chiok
   
@@ -113,8 +116,8 @@ Assigned to Divya
    *  Cover the topics
        * alert, prompt
       
- ## 8.Finishing touch
-
----
-
-## ..
+ ## 8. Finishing touches
+ 
+ * HTML and CSS Validation
+ * Fix bugs
+ * Check consistency
