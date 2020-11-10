@@ -1,97 +1,97 @@
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #1D3557;
-  }
-  
-  .container {}
-  
-  nav {
-    display: grid;
-    grid-template-columns: 15% 85%;
-  }
-  
-  nav div:nth-child(1) {
-    background-color: #457B9D;
-  }
-  
-  nav div:nth-child(2) {
-    background-color: #E43946;
-  }
-  
-  nav ul {
-    list-style: none;
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    padding-top: 2rem;
-    font-weight: bold;
-  }
-  
-  nav ul li {
-    list-style: none;
-    display: inline-block;
-    width: calc(100% / 4);
-    height: 80px;
-    text-align: center;
-  }
-  
-  nav ul li a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  #logo {
-    font-weight: bold;
-    font-size: 40px;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-  }
-  
-  #sub {
-    font-size: 20px;
-  }
-  footer {
-    background-color: #E43946;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-  }
-  
-  footer ul {
-    display: flex;
-    flex-direction: row;
-    padding-left: 20%;
-    padding-right: 20%;
-  }
-  
-  footer ul li {
-    margin: auto;
-    display: inline;
-    padding: 1rem;
-    font-weight: bold;
-    text-align: center;
-  }
-  
-  footer ul li a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  #email {
-    padding: 10px 60px;
-    border-radius: 8px;
-    border-color: white;
-  }
-  
-  #subscribe {
-    background-color: #457B9D;
-    padding: 7px 40px;
-    color: white;
-    font-size: 20px;
-    border-radius: 8px;
-    box-shadow: 7px 6px 18px rgba(0, 0, 0, 0.25);
-    border-color: #457B9D;
-  }
-  
+  margin: 0;
+  padding: 0;
+  background-color: #1d3557;
+}
+
+.container {
+}
+
+nav {
+  display: grid;
+  grid-template-columns: 15% 85%;
+}
+
+nav div:nth-child(1) {
+  background-color: #457b9d;
+}
+
+nav div:nth-child(2) {
+  background-color: #e43946;
+}
+
+nav ul {
+  list-style: none;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  padding-top: 2rem;
+  font-weight: bold;
+}
+
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  width: calc(100% / 4);
+  height: 80px;
+  text-align: center;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+#logo {
+  font-weight: bold;
+  font-size: 40px;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+#sub {
+  font-size: 20px;
+}
+footer {
+  background-color: #e43946;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer ul {
+  display: flex;
+  flex-direction: row;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+footer ul li {
+  margin: auto;
+  display: inline;
+  padding: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+footer ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+#email {
+  padding: 10px 60px;
+  border-radius: 8px;
+  border-color: white;
+}
+
+#subscribe {
+  background-color: #457b9d;
+  padding: 7px 40px;
+  color: white;
+  font-size: 20px;
+  border-radius: 8px;
+  box-shadow: 7px 6px 18px rgba(0, 0, 0, 0.25);
+  border-color: #457b9d;
+}
