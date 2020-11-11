@@ -28,8 +28,7 @@ nav div:nth-child(1) {
   background-color: #457B9D;
 }
 
-nav div:nth-child(2),
-.validator {
+nav div:nth-child(2){
   background-color: #E43946;
 }
 
@@ -67,6 +66,15 @@ footer ul li a {
 nav ul li a:hover,
 footer ul li a:hover {
   color: rgb(212, 212, 212);
+}
+
+.text-shadow{
+  filter: drop-shadow(9px 4px 23px rgba(0, 0, 0, 0.25));
+}
+
+.selected,
+.selected:hover{
+  color: rgb(8, 8, 8);
 }
 
 #logo {
