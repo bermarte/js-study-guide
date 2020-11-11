@@ -28,7 +28,7 @@ nav div:nth-child(1) {
   background-color: #457B9D;
 }
 
-nav div:nth-child(2){
+nav div:nth-child(2) {
   background-color: #E43946;
 }
 
@@ -50,7 +50,8 @@ nav ul li {
   align-items: center;
   height: 100%;
 }
-nav ul li a{
+
+nav ul li a {
   padding: 0 15px;
 }
 
@@ -68,21 +69,26 @@ footer ul li a:hover {
   color: rgb(212, 212, 212);
 }
 
-.text-shadow{
+.text-shadow {
   filter: drop-shadow(9px 4px 23px rgba(0, 0, 0, 0.25));
 }
 
 .selected,
-.selected:hover{
+.selected:hover {
   color: rgb(8, 8, 8);
 }
 
 #logo {
-  font-weight: bold;
+  font-family: open-sans-bold, Arial, Helvetica, sans-serif;
   font-size: 40px;
   color: white;
   text-align: center;
   padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-width: 30px;
 }
 
 #sub {
@@ -139,4 +145,72 @@ footer ul li {
 #subscribe:hover {
   cursor: pointer;
   background-color: #3a6986;
+}
+
+@media only screen and (max-width: 600px) {
+
+  nav {
+    background-color: #E43946;
+  }
+
+  nav ul,
+  footer ul {
+    flex-direction: column;
+    line-height: 3;
+  }
+  footer ul li {
+    margin: 0;
+    padding: 0;
+  }
+  #email {
+    margin-bottom: 20px;
+  }
+
+  #logo {
+    height: 80px;
+    filter: drop-shadow(9px 4px 23px rgba(0, 0, 0, 0.25));
+  }
+
+  #sub {
+    font-size: small;
+  }
+
+  #subscribe{
+    width: 100%;
+  }
+
+}
+
+@media only screen and (max-width: 300px) {
+
+  nav,
+  footer {
+    display: block;
+    width: 300px;
+  }
+
+  #email {
+    width: 16%;
+  }
+
+  footer .container {
+    display: block;
+
+  }
+
+  footer ul {
+    padding: 0;
+  }
+
+  footer ul li {
+    display: block;
+    padding: 0;
+  }
+  #subscribe{
+    width: 58%;
+  }
+
+
+
+
 }
