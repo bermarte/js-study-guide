@@ -1,10 +1,22 @@
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #1d3557;
+@font-face {
+  font-family: open-sans;
+  src: url(../fonts/OpenSans-Regular.ttf);
 }
 
-.container {
+@font-face {
+  font-family: open-sans-bold;
+  src: url(../fonts/OpenSans-Bold.ttf);
+}
+
+* {
+  font-family: open-sans, Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  max-width: 3000px;
+  background-color: #1D3557;
 }
 
 nav {
@@ -13,33 +25,47 @@ nav {
 }
 
 nav div:nth-child(1) {
-  background-color: #457b9d;
+  background-color: #457B9D;
 }
 
 nav div:nth-child(2) {
-  background-color: #e43946;
+  background-color: #E43946;
 }
 
 nav ul {
-  list-style: none;
-  margin: auto;
   display: flex;
   flex-direction: row;
-  padding-top: 2rem;
-  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0;
+  line-height: 5;
 }
 
 nav ul li {
   list-style: none;
-  display: inline-block;
-  width: calc(100% / 4);
-  height: 80px;
-  text-align: center;
+  flex: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+nav ul li a{
+  padding: 0 15px;
 }
 
-nav ul li a {
+nav ul li a,
+footer ul li a {
   color: white;
   text-decoration: none;
+  font-family: open-sans-bold, Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  letter-spacing: .02rem;
+}
+
+nav ul li a:hover,
+footer ul li a:hover {
+  color: rgb(212, 212, 212);
 }
 
 #logo {
@@ -53,18 +79,28 @@ nav ul li a {
 #sub {
   font-size: 20px;
 }
+
 footer {
-  background-color: #e43946;
+  background-color: #E43946;
   position: fixed;
   bottom: 0;
-  width: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  max-width: 3000px;
+}
+
+footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  flex-wrap: wrap;
 }
 
 footer ul {
   display: flex;
   flex-direction: row;
-  padding-left: 20%;
-  padding-right: 20%;
 }
 
 footer ul li {
@@ -75,11 +111,6 @@ footer ul li {
   text-align: center;
 }
 
-footer ul li a {
-  color: white;
-  text-decoration: none;
-}
-
 #email {
   padding: 10px 60px;
   border-radius: 8px;
@@ -87,11 +118,16 @@ footer ul li a {
 }
 
 #subscribe {
-  background-color: #457b9d;
+  background-color: #457B9D;
   padding: 7px 40px;
   color: white;
   font-size: 20px;
   border-radius: 8px;
   box-shadow: 7px 6px 18px rgba(0, 0, 0, 0.25);
-  border-color: #457b9d;
+  border-color: #457B9D;
+}
+
+#subscribe:hover {
+  cursor: pointer;
+  background-color: #3a6986;
 }

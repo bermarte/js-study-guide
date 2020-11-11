@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>JS Study Guide</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="css/style.css" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- you will need these styles and scripts -->
     <!-- if you create new .html files, copy them into the head -->
     <!-- if those files are in a folder, be sure to adjust all the paths! -->
@@ -31,24 +31,22 @@
 
   <body>
     <!-- Header section logo and links-->
-    <div class="container">
-      <nav>
-        <div id="logo">
-          JS
-          <div id="sub">Study Guide</div>
-        </div>
-        <div class="navbar-links">
-          <ul>
-            <li><a href="#">About JS</a></li>
-            <li><a href="#">Variables & Types</a></li>
-            <li><a href="#">Logic & Arithmetic</a></li>
-            <li><a href="#">Loops</a></li>
-            <li><a href="#">Functions</a></li>
-            <li><a href="#">Interaction</a></li>
-          </ul>
-        </div>
-      </nav>
-    </div>
+    <nav>
+      <div id="logo">
+        JS
+        <div id="sub">Study Guide</div>
+      </div>
+      <div class="navbar-links">
+        <ul>
+          <li><a href="#" class="selected">About JS</a></li>
+          <li><a href="variables.html">Variables & Types</a></li>
+          <li><a href="operations.html">Logic & Arithmetic</a></li>
+          <li><a href="loops.html">Loops</a></li>
+          <li><a href="functions.html">Functions</a></li>
+          <li><a href="alert.html">Interaction</a></li>
+        </ul>
+      </div>
+    </nav>
     <!--fixed footer-->
     <footer>
       <div class="container">
@@ -63,8 +61,8 @@
               name="mail"
               required
             />
-            <input id="subscribe" type="submit" value="Subscribe" />
           </li>
+          <li><input id="subscribe" type="submit" value="Subscribe" /></li>
         </ul>
       </div>
     </footer>
