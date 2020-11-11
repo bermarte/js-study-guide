@@ -28,7 +28,8 @@ nav div:nth-child(1) {
   background-color: #457B9D;
 }
 
-nav div:nth-child(2) {
+nav div:nth-child(2),
+.validator {
   background-color: #E43946;
 }
 
