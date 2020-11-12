@@ -19,20 +19,20 @@ body {
   background-color: #1D3557;
 }
 
-nav {
+header nav {
   display: grid;
   grid-template-columns: 15% 85%;
 }
 
-nav div:nth-child(1) {
+header nav div:nth-child(1) {
   background-color: #457B9D;
 }
 
-nav div:nth-child(2) {
+header nav div:nth-child(2) {
   background-color: #E43946;
 }
 
-nav ul {
+header nav ul {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -42,7 +42,7 @@ nav ul {
   line-height: 5;
 }
 
-nav ul li {
+header nav ul li {
   list-style: none;
   flex: auto;
   display: flex;
@@ -51,11 +51,11 @@ nav ul li {
   height: 100%;
 }
 
-nav ul li a {
+header nav ul li a {
   padding: 0 15px;
 }
 
-nav ul li a,
+header nav ul li a,
 footer ul li a {
   color: white;
   text-decoration: none;
@@ -64,7 +64,7 @@ footer ul li a {
   letter-spacing: .02rem;
 }
 
-nav ul li a:hover,
+header nav ul li a:hover,
 footer ul li a:hover {
   color: rgb(212, 212, 212);
 }
@@ -122,7 +122,6 @@ footer ul li {
   margin: auto;
   display: inline;
   padding: 1rem;
-  font-weight: bold;
   text-align: center;
 }
 
@@ -147,13 +146,68 @@ footer ul li {
   background-color: #3a6986;
 }
 
+/* breadcrumb */
+.breadcrumb{
+  background-color: #FFC800;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-shadow: inset 0px 4px 26px rgba(0, 0, 0, 0.25);
+}
+
+.breadcrumb ul{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.breadcrumb nav ul li {
+  margin: auto;
+  display: inline;
+  padding: 1rem 3rem;
+  text-align: center;
+}
+
+.breadcrumb nav ul li a {
+  text-decoration: none;
+  font-family: open-sans-bold, Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  letter-spacing: .02rem;
+  color: #000;
+}
+
+.breadcrumb nav ul li a:hover {
+  color: grey;
+}
+
+.breadcrumb nav ul li a:hover::before {
+
+  background-color: grey;
+}
+
+.breadcrumb nav ul li a::before{
+  content: '';
+  display: inline-block;
+  margin-right: 20px;
+  width: 18px;
+  height: 18px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background-color: #000;
+}
+
 @media only screen and (max-width: 600px) {
 
-  nav {
+  header nav {
     background-color: #E43946;
   }
 
-  nav ul,
+  header nav ul,
   footer ul {
     flex-direction: column;
     line-height: 3;
@@ -179,11 +233,15 @@ footer ul li {
     width: 100%;
   }
 
+  .breadcrumb nav ul li a::before{
+    display: none;
+  }
+
 }
 
 @media only screen and (max-width: 300px) {
 
-  nav,
+  header nav,
   footer {
     display: block;
     width: 300px;
@@ -209,8 +267,8 @@ footer ul li {
   #subscribe{
     width: 58%;
   }
-
-
-
+  .breadcrumb{
+    display: none;
+  }
 
 }
