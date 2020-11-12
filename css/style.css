@@ -349,6 +349,9 @@ footer ul li {
     color: black;
   }
   
+.header-links ul li a:hover {
+    color: red;
+}
 
 @media only screen and (max-width: 600px) {
     nav {
