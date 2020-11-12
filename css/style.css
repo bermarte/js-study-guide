@@ -306,6 +306,50 @@ footer ul li {
     top: 3195px;
 }
 
+/*Divya's section(loops)*/
+
+.loop-wrap {
+    margin-bottom:1rem;
+    position: relative;
+    width: 1350px;
+    height: 900px;
+    left: 125px;
+    padding: 3rem;
+  
+    background: #d6d6d7;
+    border-radius: 21px;
+  }
+  .loop-text-wrap {
+    padding-left: 7rem;
+  }
+  
+  .code-example {
+    width: 77vw;
+    text-align: left;
+  }
+  
+  .header-links {
+    background-color: #ffc800;
+  }
+  
+  .header-links ul {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .header-links ul li {
+    display: inline;
+    width: calc(100% / 4);
+    text-align: center;
+    padding: 1rem;
+    font-weight: bold;
+  }
+  .header-links a {
+    text-decoration: none;
+    color: black;
+  }
+  
+
 @media only screen and (max-width: 600px) {
     nav {
         background-color: #E43946;
