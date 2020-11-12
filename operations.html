@@ -1,99 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>JS Study Guide</title>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="css/style.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- you will need these styles and scripts -->
-    <!-- if you create new .html files, copy them into the head -->
-    <!-- if those files are in a folder, be sure to adjust all the paths! -->
-    <link
-      rel="stylesheet"
-      data-name="vs/editor/editor.main"
-      href="./lib/monaco/min/vs/editor/editor.main.css"
-    />
 
-    <script src="./lib/prettier/standalone.js"></script>
-    <script src="./lib/prettier/parser-babel.js"></script>
+<head>
+  <title>JS Study Guide - logic</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="css/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- you will need these styles and scripts -->
+  <!-- if you create new .html files, copy them into the head -->
+  <!-- if those files are in a folder, be sure to adjust all the paths! -->
+  <link rel="stylesheet" data-name="vs/editor/editor.main" href="./lib/monaco/min/vs/editor/editor.main.css" />
 
-    <script>
-      var require = { paths: { vs: "./lib/monaco/min/vs" } };
-    </script>
-    <script src="./lib/monaco/min/vs/loader.js"></script>
-    <script src="./lib/monaco/min/vs/editor/editor.main.nls.js"></script>
-    <script src="./lib/monaco/min/vs/editor/editor.main.js"></script>
+  <script src="./lib/prettier/standalone.js"></script>
+  <script src="./lib/prettier/parser-babel.js"></script>
 
-    <script src="./lib/wc-code-along.js"></script>
+  <script>
+    var require = {
+      paths: {
+        vs: "./lib/monaco/min/vs"
+      }
+    };
+  </script>
+  <script src="./lib/monaco/min/vs/loader.js"></script>
+  <script src="./lib/monaco/min/vs/editor/editor.main.nls.js"></script>
+  <script src="./lib/monaco/min/vs/editor/editor.main.js"></script>
 
-    <script src="./lib/evaluation-buttons.js"></script>
-  </head>
+  <script src="./lib/wc-code-along.js"></script>
 
-  <body>
-    <!-- Header section logo and links-->
-    <header>
-      <nav>
-        <div id="logo">
-          JS
-          <div id="sub">Study Guide</div>
-        </div>
-        <div class="navbar-links">
-          <ul>
-            <li><a href="#">About JS</a></li>
-            <li><a href="#">Variables & Types</a></li>
-            <li><a href="#" class="selected">Logic & Arithmetic</a></li>
-            <li><a href="#">Loops</a></li>
-            <li><a href="#">Functions</a></li>
-            <li><a href="#">Interaction</a></li>
-          </ul>
-        </div>
-      </nav>
-    </header>
-    <!-- breadcrumb -->
-    <div class="breadcrumb">
-      <nav>
-        <ul>
-          <li><a href="#operators">Logical operators</a></li>
-          <li><a href="#block">Block scope</a></li>
-          <li><a href="#conditionals">Conditionals</a></li>
-          <li><a href="#comparisons">Comparisons</a></li>
-          <li><a href="#comparisons">Arithmetic</a></li>
-        </ul>
-      </nav>
-    </div>
-    <!--content -->
-    <main>
-      <div class="container">
-        <h1>Logic and Arithmetic</h1>
+  <script src="./lib/evaluation-buttons.js"></script>
+
+  <!-- you will need these styles and scripts to use prism snippets -->
+  <script src='../lib/prism/prism.js'></script>
+  <script src='../lib/prism/toolbar-buttons.js'></script>
+  <link rel="stylesheet" href="../lib/prism/prism.css">
+
+</head>
+
+<body>
+  <!-- Header section logo and links-->
+  <header>
+    <nav>
+      <div id="logo">
+        JS
+        <div id="sub">Study Guide</div>
       </div>
-      <div id="operations">
+      <div class="navbar-links">
+        <ul>
+          <li><a href="index.html">About JS</a></li>
+          <li><a href="variables.html">Variables & Types</a></li>
+          <li><a href="#" class="selected">Logic & Arithmetic</a></li>
+          <li><a href="loops.html">Loops</a></li>
+          <li><a href="functions.html">Functions</a></li>
+          <li><a href="alert.html">Interaction</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- breadcrumb -->
+  <div class="breadcrumb">
+    <nav>
+      <ul>
+        <li><a href="#operators">Logical operators</a></li>
+        <li><a href="#block">Block scope</a></li>
+        <li><a href="#conditionals">Conditionals</a></li>
+        <li><a href="#comparisons">Comparisons</a></li>
+        <li><a href="#comparisons">Arithmetic</a></li>
+      </ul>
+    </nav>
+  </div>
+  <!--content -->
+  <main>
+    <div class="container">
+      <h1>Logic and Arithmetic</h1>
+    </div>
+    <div id="operations">
+      <div class="operations-paragraph">
         <h2>Logic</h2>
         <p id="logic">
           The study of the principles of reasoning, especially of the structure
           of propositions as distinguished from their content and of method and
           validity in deductive reasoning.
         </p>
+        <div class="iframe-container">
+          <iframe src="https://www.youtube.com/embed/s16xd9XyDnY" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
       </div>
-    </main>
-    <!--fixed footer-->
-    <footer>
-      ic
-      <div class="container">
-        <ul class="text-shadow">
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Contact Us</a></li>
-          <li>
-            <input
-              id="email"
-              type="text"
-              placeholder="Enter Your E-mail"
-              name="mail"
-              required
-            />
-          </li>
-          <li><input id="subscribe" type="submit" value="Subscribe" /></li>
-        </ul>
+
+      <hr>
+
+      <div class="operations-paragraph" id="operators">
+        <!-- AND -->
+        <!-- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND -->
+        <h2>Logic AND (&&)</h2>
+        <p>
+          The logical AND (&&) operator (logical conjunction) for a set of operands is true if and only if all of its
+          operands are true. It is typically used with Boolean (logical) values. When it is, it returns a Boolean value.
+          However, the && operator actually returns the value of one of the specified operands, so if this operator is
+          used with non-Boolean values, it will return a non-Boolean value.
+        </p>
+        <p>
+          <div class="code">
+            <div class='snippet'>
+              <pre class='line-numbers' data-src='./snippets/and_operand.js' eval js-tutor></pre>
+            </div>
+          </div>
+        </p>
+        <p>
+          If a value can be converted to true, the value is so-called truthy. If a value can be converted to false, the
+          value is so-called falsy.
+        </p>
       </div>
-    </footer>
-  </body>
+      <hr>
+
+      <div class="operations-paragraph">
+        <h2>Logic OR (||)</h2>
+        <p>
+          The logical OR (||) operator (logical disjunction) for a set of operands is true if and only if one or more of
+          its operands is true. It is typically used with Boolean (logical) values. When it is, it returns a Boolean
+          value. However, the || operator actually returns the value of one of the specified operands, so if this
+          operator is used with non-Boolean values, it will return a non-Boolean value.
+        </p>
+        <p>
+          <div class="code">
+            <div class='snippet'>
+              <pre class='line-numbers' data-src='./snippets/or_operand.js' eval js-tutor></pre>
+            </div>
+          </div>
+        </p>
+      </div>
+
+      <hr>
+
+      <div class="operations-paragraph">
+        <h2>Logical NOT (!)</h2>
+        <p>
+          The logical NOT (!) operator (logical complement, negation) takes truth to falsity and vice versa. It is
+          typically used with Boolean (logical) values. When used with non-Boolean values, it returns false if its
+          single operand can be converted to true; otherwise, returns true.
+        </p>
+        <p>
+          <div class="code">
+            <div class='snippet'>
+              <pre class='line-numbers' data-src='./snippets/not_operand.js' eval js-tutor></pre>
+            </div>
+          </div>
+        </p>
+      </div>
+
+    </div>
+  </main>
+  <div class="gutter">
+  </div>
+  <!-- footer -->
+  <footer>
+    <div class="container">
+      <ul class="text-shadow">
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li>
+          <input id="email" type="text" placeholder="Enter Your E-mail" name="mail" required />
+        </li>
+        <li><input id="subscribe" type="submit" value="Subscribe" /></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+
 </html>

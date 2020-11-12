@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>example topic page</title>
+
+  <style>
+    .snippet {
+      font-size: 70%;
+    }
+  </style>
+
+  <!-- you will need these styles and scripts to use <code-along> -->
+  <script src='../lib/prettier/standalone.js'></script>
+  <script src='../lib/prettier/parser-babel.js'></script>
+
+  <link rel="stylesheet" data-name="vs/editor/editor.main" href="../lib/monaco/min/vs/editor/editor.main.css">
+
+  <script>var require = { paths: { 'vs': '../lib/monaco/min/vs' } };</script>
+  <script src="../lib/monaco/min/vs/loader.js"></script>
+  <script src="../lib/monaco/min/vs/editor/editor.main.nls.js"></script>
+  <script src="../lib/monaco/min/vs/editor/editor.main.js"></script>
+
+  <script src='../lib/wc-code-along.js'></script>
+
+  <!-- you will need these styles and scripts to use prism snippets -->
+  <script src='../lib/prism/prism.js'></script>
+  <script src='../lib/prism/toolbar-buttons.js'></script>
+  <link rel="stylesheet" href="../lib/prism/prism.css">
+
+
+</head>
+
+<body>
+
+  <h1>Truthiness</h1>
+
+  <!-- Essence: the essence of the topic -->
+
+  <p>
+    Truthiness is not so difficult to understand if you start with just primitive types. Just ask this simple question:
+    <li>does the value cast to the Boolean value <code>true</code> or <code>false</code>?</li>
+    <br>
+    If the value casts to <code>true</code>, it's truthy. <br>
+    If the value casts to <code>false</code>, it's falsy. <br>
+    <br>
+    To discover a value's truthiness you can either memorize a whole bunch of rules and make lots of guesses, or ... ask
+    JavaScript! (just try it your debugger ;)
+  </p>
+
+  <!-- Examples: some helpful example(s) to study  -->
+
+  <div class='snippet'>
+    <pre class='line-numbers' data-src='./snippets/falsy-values.js' eval js-tutor></pre>
+  </div>
+
+  <!-- Explanation: a more in-depth explanation of the examples -->
+
+  <!-- in a more complicated topic this is where you could embed videos, diagrams, or link to any other references/tutorials -->
+
+  <p>
+    That's about it! The values in that example cast to <code>false</code> (are falsy). Any other String, Number, or
+    Boolean will cast to <code>true</code> (are truthy). Take a look through these links to take dig deeper:
+
+  <ul>
+    <li>
+      <a href='https://www.youtube.com/watch?v=6hESXoxDtgo' target='_blank'>Sam Bennet explains</a> </li>
+  </ul>
+  </p>
+
+  <hr>
+
+  <!-- Exercises: some exercises to practice applying the concept -->
+
+  <h2>Some Practice</h2>
+
+  <code-along src='./snippets/truthiness-exercises.js'></code-along>
+
+</body>
+
+</html>
