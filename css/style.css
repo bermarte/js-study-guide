@@ -244,7 +244,7 @@ hr {
 }
 
 /* operations */
-#guide {
+.guide {
   background-color: #D6D6D7;
   border-radius: 10px;
   width: 80%;
@@ -285,7 +285,8 @@ hr {
 #ul-conditionals{
   line-height: 2.5rem;
 }
-#ul-conditionals .term{
+#ul-conditionals .term,
+.guide-paragraph .term{
   background-color: rgb(195, 195, 195);
   border-radius: 25px;
   padding: 0px 6px;
