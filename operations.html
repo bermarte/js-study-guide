@@ -70,11 +70,14 @@
   </div>
   <!--content -->
   <main>
+
+    <!-- logic -->
     <div class="container">
       <h1>Logic and Arithmetic</h1>
     </div>
-    <div id="operations">
-      <div class="operations-paragraph">
+
+    <div id="guide">
+      <div class="guide-paragraph">
         <h2>Logic</h2>
         <p id="logic">
           The study of the principles of reasoning, especially of the structure
@@ -89,12 +92,12 @@
       </div>
 
       <hr>
-      
+
       <div class="container-label">
-        <div class="label">Logical operators</div>
+        <div class="label" id="operators">Logical operators</div>
       </div>
 
-      <div class="operations-paragraph" id="operators">
+      <div class="guide-paragraph">
         <!-- AND -->
         <!-- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND -->
         <h2>Logic AND (&&)</h2>
@@ -118,7 +121,7 @@
       </div>
       <hr>
 
-      <div class="operations-paragraph">
+      <div class="guide-paragraph">
         <h2>Logic OR (||)</h2>
         <p>
           The logical OR (||) operator (logical disjunction) for a set of operands is true if and only if one or more of
@@ -137,7 +140,7 @@
 
       <hr>
 
-      <div class="operations-paragraph">
+      <div class="guide-paragraph">
         <h2>Logical NOT (!)</h2>
         <p>
           The logical NOT (!) operator (logical complement, negation) takes truth to falsity and vice versa. It is
@@ -154,6 +157,143 @@
       </div>
 
     </div>
+
+    <div class="container">
+      <h1>What is Scope?</h1>
+    </div>
+    <div id="guide">
+      <div class="guide-paragraph">
+        <h2>Scope</h2>
+        <!--https://dev.to/sandy8111112004/javascript-introduction-to-scope-function-scope-block-scope-d11 -->
+        <p id="scope">
+          Scope determines the visibility or accessibility of a variable or other resource in the area of your code.
+        </p>
+
+        <div class="iframe-container">
+          <iframe src="https://www.youtube.com/embed/iJKkZA215tQ" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="container-label">
+        <!-- block scope -->
+        <div class="label" id="block">Block Scope</div>
+      </div>
+      <div class="guide-paragraph">
+        <p>
+          Generally speaking, whenever you
+          see {curly brackets}, it is a block. In ES6, const and let keywords allow developers to declare variables in
+          the
+          block scope, which means those variables exist only within the corresponding block.
+        </p>
+        <p>
+          <div class="code">
+            <div class='snippet'>
+              <pre class='line-numbers' data-src='./snippets/block_scope.js' eval js-tutor></pre>
+            </div>
+          </div>
+        </p>
+      </div>
+
+      <hr>
+
+      <!-- global scope -->
+      <div class="guide-paragraph">
+        <h2>Global scope</h2>
+        <p>
+          There's only one Global scope in the JavaScript document. The area outside all the functions is consider the
+          global scope and the variables defined inside the global scope can be accessed and altered in any other
+          scopes.
+        </p>
+        <p>
+          <div class="code">
+            <div class='snippet'>
+              <pre class='line-numbers' data-src='./snippets/global_scope.js' eval js-tutor></pre>
+            </div>
+          </div>
+        </p>
+      </div>
+
+      <hr>
+
+      <!-- local scope -->
+      <div class="guide-paragraph">
+        <h2>Local scope</h2>
+        <p>
+          Variables declared inside the functions become Local to the function and are considered in the corresponding
+          local scope. Every Functions has its own scope. Same variable can be used in different functions because they
+          are bound to the respective functions and are not mutual visible.
+        </p>
+        <p>
+          <div class="code">
+            <div class='snippet'>
+              <pre class='line-numbers' data-src='./snippets/local_scope.js' eval js-tutor></pre>
+            </div>
+          </div>
+        </p>
+      </div>
+
+    </div>
+
+    <!-- conditionsls -->
+
+    <div class="container">
+      <h1>Decision Making</h1>
+    </div>
+
+    <div id="guide">
+      <div class="guide-paragraph">
+        <h2>Code flow</h2>
+        <p>
+          <!-- https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals -->
+          In any programming language, the code needs to make decisions and carry out actions accordingly depending on
+          different inputs. For example, in a game, if the player's number of lives is 0, then it's game over. In a
+          weather app, if it is being looked at in the morning, show a sunrise graphic; show stars and a moon if it is
+          nighttime.
+        </p>
+
+        <div class="iframe-container">
+          <iframe src="https://www.youtube.com/embed/qdr6XgYYH7I" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+
+        <p>
+          <!-- https://www.lynda.com/JavaScript-tutorials/Making-decisions-code/779751/2231148-4.html -->
+          Making decisions in your code: Conditionals; by means of Boolean expressions you can make decisions in your
+          code.
+        </p>
+      </div>
+
+      <hr>
+
+      <div class="container-label">
+        <!-- conditionals -->
+        <div class="label" id="block">Conditionals</div>
+      </div>
+
+      <div class="guide-paragraph">
+        <p>
+          <!-- https://www.w3schools.com/js/js_if_else.asp -->
+          In JavaScript we have the following conditional statements:
+        </p>
+        <p>
+          <ul id="ul-conditionals">
+            <li>Use <span class="term">if</span> to specify a block of code to be executed, if a specified condition is
+              true</li>
+            <li>Use <span class="term">else</span> to specify a block of code to be executed, if the same condition is
+              false</li>
+            <li>Use <span class="term">else if</span> to specify a new condition to test, if the first condition is
+              false</li>
+            <li>Use <span class="term">switch</span> to specify many alternative blocks of code to be executed</li>
+          </ul>
+
+        </p>
+
+      </div>
   </main>
   <div class="gutter">
   </div>
