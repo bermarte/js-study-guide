@@ -1,129 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>JS Study Guide</title>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="css/style.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- you will need these styles and scripts -->
-    <!-- if you create new .html files, copy them into the head -->
-    <!-- if those files are in a folder, be sure to adjust all the paths! -->
-    <link
-      rel="stylesheet"
-      data-name="vs/editor/editor.main"
-      href="./lib/monaco/min/vs/editor/editor.main.css"
-    />
 
-    <script src="./lib/prettier/standalone.js"></script>
-    <script src="./lib/prettier/parser-babel.js"></script>
+<head>
+  <title>JS Study Guide</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="css/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- you will need these styles and scripts -->
+  <!-- if you create new .html files, copy them into the head -->
+  <!-- if those files are in a folder, be sure to adjust all the paths! -->
+  <link rel="stylesheet" data-name="vs/editor/editor.main" href="./lib/monaco/min/vs/editor/editor.main.css" />
 
-    <script>
-      var require = { paths: { vs: "./lib/monaco/min/vs" } };
-    </script>
-    <script src="./lib/monaco/min/vs/loader.js"></script>
-    <script src="./lib/monaco/min/vs/editor/editor.main.nls.js"></script>
-    <script src="./lib/monaco/min/vs/editor/editor.main.js"></script>
+  <script src="./lib/prettier/standalone.js"></script>
+  <script src="./lib/prettier/parser-babel.js"></script>
 
-    <script src="./lib/wc-code-along.js"></script>
+  <script>
+    var require = {
+      paths: {
+        vs: "./lib/monaco/min/vs"
+      }
+    };
+  </script>
+  <script src="./lib/monaco/min/vs/loader.js"></script>
+  <script src="./lib/monaco/min/vs/editor/editor.main.nls.js"></script>
+  <script src="./lib/monaco/min/vs/editor/editor.main.js"></script>
 
-    <script src="./lib/evaluation-buttons.js"></script>
-  </head>
+  <script src="./lib/wc-code-along.js"></script>
 
-  <body>
-    <!-- Header section logo and links-->
-    <nav>
-      <div id="logo">
-        JS
-        <div id="sub">Study Guide</div>
+  <script src="./lib/evaluation-buttons.js"></script>
+
+  <!-- you will need these styles and scripts to use prism snippets -->
+  <script src='../lib/prism/prism.js'></script>
+  <script src='../lib/prism/toolbar-buttons.js'></script>
+  <link rel="stylesheet" href="../lib/prism/prism.css">
+</head>
+
+<body>
+  <!-- Header section logo and links-->
+  <nav>
+    <div id="logo">
+      JS
+      <div id="sub">Study Guide</div>
+    </div>
+    <div class="navbar-links">
+      <ul class="text-shadow">
+        <li><a href="index.html">About JS</a></li>
+        <li><a href="variables.html">Variables & Types</a></li>
+        <li><a href="operations.html">Logic & Arithmetic</a></li>
+        <li><a href="#" class="selected">Loops</a></li>
+        <li><a href="functions.html">Functions</a></li>
+        <li><a href="alert.html">Interaction</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!--content -->
+  <!--loops section divya-->
+  <div class="header-links">
+    <div class="container">
+      <ul>
+        <li><a href="#loop">While loop</a></li>
+        <li><a href="#increment">Increment & Decremeent</a></li>
+        <li><a href="#break">Break & Continue</a></li>
+        <li><a href="#for">For loop</a></li>
+      </ul>
+    </div>
+  </div>
+  <section id="loop">
+    <div class="loop-text-wrap">
+      <h3 style="color:white;">LOOPS</h3>
+      <p style="color:white;">
+        Loops offer a quick and easy way to do something repeatedly , each time with a different value. A loop is a
+        programming structure that repeats a sequence of instructions until a specific condition is met. Programmers use
+        loops to cycle
+        through values, add sums of numbers, repeat functions, and many other things.
+      </p>
+    </div>
+    <div class="loop-wrap">
+      <h4>While loop</h4>
+      <p>The while statement creates a loop that executes a specified statement as long as the test condition evaluates
+        to true. The while loop starts by evaluating the condition. If the condition is true, the statement(s) is/are
+        executed. If the
+        condition is false, the statement(s) is/are not executed. After that, while loop ends.
+      </p>
+      <p>Example
+      </p>
+      <pre class='line-numbers' data-src='./example/snippets/while.js' eval js-tutor></pre>
+      <!--<code-along src='example\snippets\while.js' loop-guard class='code-example'></code-along> -->
+      <p>test test test</p>
+    </div>
+  </section>
+  <section id="increment">
+    <div class="loop-wrap">
+      <h4>Increment & Decerement operators</h4>
+      <p>The JavaScript Increment and Decrement Operators useful to increase or decrease the value by 1. For instance,
+        Incremental operator ++ used to increase the existing variable value by 1 (x = x + 1). The decrement operator –
+        – is used to decrease or subtract the existing value by 1 (x = x – 1).
+        There are two ways to implement increment and decrement operators they are
+        prefix(--x) and postfix(x--)
+      </p>
+      <p>Example</p>
+      <!-- <code-along src='./example/js-snippets/increment1.js'  class='code-example'></code-along>-->
+      <div class="code-example">
+        <!-- <js-snippet src='JS-STUDY-GUIDE/jscodes/increment.js'></js-snippet> -->
+        <!-- there's no increment.js file -->
+        <pre class='line-numbers' data-src='./jscodes/increment.js' eval js-tutor></pre>
       </div>
-      <div class="navbar-links">
-        <ul class="text-shadow">
-          <li><a href="index.html">About JS</a></li>
-          <li><a href="variables.html">Variables & Types</a></li>
-          <li><a href="operations.html">Logic & Arithmetic</a></li>
-          <li><a href="#" class="selected">Loops</a></li>
-          <li><a href="functions.html">Functions</a></li>
-          <li><a href="alert.html">Interaction</a></li>
-        </ul>
-      </div>
-    </nav>
-    <!--content -->
-    <!--loops section divya-->
-    <div class="header-links">
-        <div class="container">
-          <ul>
-            <li><a href="#loop">While loop</a></li>
-            <li><a href="#increment">Increment & Decremeent</a></li>
-            <li><a href="#break">Break & Continue</a></li>
-            <li><a href="#for">For loop</a></li>
-          </ul>
-        </div>
-      </div>
-      <section id="loop">
-        <div class="loop-text-wrap">
-          <h3 style="color:white;">LOOPS</h3>
-          <p style="color:white;">
-            Loops offer a quick and easy way to do something repeatedly , each time with a different value. A loop is a programming structure that repeats a sequence of instructions until a specific condition is met. Programmers use loops to cycle
-            through values, add sums of numbers, repeat functions, and many other things.
-          </p>
-        </div>
-        <div class="loop-wrap">
-          <h4>While loop</h4>
-          <p>The while statement creates a loop that executes a specified statement as long as the test condition evaluates to true. The while loop starts by evaluating the condition. If the condition is true, the statement(s) is/are executed. If the
-            condition is false, the statement(s) is/are not executed. After that, while loop ends.
-           </p> 
-           <p>Example
-          </p>
-         
-          <code-along src='example\snippets\while.js' loop-guard class='code-example'></code-along>
-            <p>test test test</p>
-        </div>
-      </section>
-      <section id="increment">
-        <div class="loop-wrap">
-          <h4>Increment & Decerement operators</h4>
-          <p>The JavaScript Increment and Decrement Operators useful to increase or decrease the value by 1. For instance, Incremental operator ++ used to increase the existing variable value by 1 (x = x + 1). The decrement operator – – is used to decrease or subtract the existing value by 1 (x = x – 1).
-            There are two ways to implement increment and decrement operators they are 
-            prefix(--x) and postfix(x--)
-          </p>
-            <p>Example</p>
-           <!-- <code-along src='./example/js-snippets/increment1.js'  class='code-example'></code-along>-->
-           <div class="code-example">
-            <js-snippet  src='JS-STUDY-GUIDE/jscodes/increment.js'></js-snippet>
-            </div>
-        </div>
-      </section>
-      <section id="break">
-        <div class="loop-wrap">
-          <h4>Break & Continue</h4>
-          <p></p>
-        </div>
-      </section>
-      <section id="for">
-        <div class="loop-wrap">
-          <h4>For loop</h4>
-          <code-along src='./example/snippets/while-loop.js' loop-guard class='code-example'></code-along>
-        </div>
-      </section>
+    </div>
+  </section>
+  <section id="break">
+    <div class="loop-wrap">
+      <h4>Break & Continue</h4>
+      <p></p>
+    </div>
+  </section>
+  <section id="for">
+    <div class="loop-wrap">
+      <h4>For loop</h4>
+      <!-- <code-along src='./example/snippets/while-loop.js' loop-guard class='code-example'></code-along> -->
+      <pre class='line-numbers' data-src='./example/snippets/while-loop.js' eval js-tutor></pre>
+    </div>
+  </section>
 
-    <!--fixed footer-->
-    <footer>
-      <div class="container">
-        <ul class="text-shadow">
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Contact Us</a></li>
-          <li>
-            <input
-              id="email"
-              type="text"
-              placeholder="Enter Your E-mail"
-              name="mail"
-              required
-            />
-          </li>
-          <li><input id="subscribe" type="submit" value="Subscribe" /></li>
-        </ul>
-      </div>
-    </footer>
-  </body>
+  <!--fixed footer-->
+  <footer>
+    <div class="container">
+      <ul class="text-shadow">
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li>
+          <input id="email" type="text" placeholder="Enter Your E-mail" name="mail" required />
+        </li>
+        <li><input id="subscribe" type="submit" value="Subscribe" /></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+
 </html>
