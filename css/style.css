@@ -101,6 +101,10 @@ footer {
   margin: auto;
   max-width: 3000px;
 }
+.fixed{
+  position: fixed;
+  bottom: 0px;
+}
 
 footer .container {
   display: flex;
@@ -223,14 +227,14 @@ hr {
   background-color: #333;
 }
 
-.container-label{
+.container-label {
   display: flex;
   width: 100%;
   justify-content: flex-end;
   align-items: flex-start;
 }
 
-.label{
+.label {
   font-size: 36px;
   padding: 15px 140px;
   background: #C0C0C0;
@@ -240,7 +244,7 @@ hr {
   line-height: 2.5rem;
   overflow-x: hidden;
   top: -12px;
-  position:relative;
+  position: relative;
 }
 
 /* operations */
@@ -284,11 +288,12 @@ hr {
 
 /* Bermarte's section */
 
-#ul-conditionals{
+#ul-conditionals {
   line-height: 2.5rem;
 }
+
 #ul-conditionals .term,
-.guide-paragraph .term{
+.guide-paragraph .term {
   background-color: rgb(195, 195, 195);
   border-radius: 25px;
   padding: 0px 6px;
@@ -465,6 +470,7 @@ hr {
   background: #d6d6d7;
   border-radius: 21px;
 }
+
 .loop-text-wrap {
   margin: 4rem;
 }
@@ -490,6 +496,7 @@ hr {
   padding: 1rem;
   font-weight: bold;
 }
+
 .header-links a {
   text-decoration: none;
   color: black;

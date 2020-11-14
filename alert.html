@@ -1,216 +1,67 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>JS Study Guide</title>
-    <meta charset="utf-8">
+    <title>JS Study Guide - logic</title>
+    <meta charset="utf-8" />
     <link rel="stylesheet" href="css/style.css" />
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- you will need these styles and scripts -->
     <!-- if you create new .html files, copy them into the head -->
     <!-- if those files are in a folder, be sure to adjust all the paths! -->
-    <link rel="stylesheet" data-name="vs/editor/editor.main" href="./lib/mobody {
-    margin: 0;
-    padding: 0;
-    background-color: #1D3557;
-}
+    <link rel="stylesheet" data-name="vs/editor/editor.main" href="./lib/monaco/min/vs/editor/editor.main.css" />
 
-.container {}
+    <script src="./lib/prettier/standalone.js"></script>
+    <script src="./lib/prettier/parser-babel.js"></script>
 
-nav {
-    display: grid;
-    grid-template-columns: 15% 85%;
-}
+    <script>
+        var require = {
+            paths: {
+                vs: "./lib/monaco/min/vs"
+            }
+        };
+    </script>
+    <script src="./lib/monaco/min/vs/loader.js"></script>
+    <script src="./lib/monaco/min/vs/editor/editor.main.nls.js"></script>
+    <script src="./lib/monaco/min/vs/editor/editor.main.js"></script>
 
-nav div:nth-child(1) {
-    background-color: #457B9D;
-}
+    <script src="./lib/wc-code-along.js"></script>
 
-nav div:nth-child(2) {
-    background-color: #E43946;
-}
+    <script src="./lib/evaluation-buttons.js"></script>
 
-nav ul {
-    list-style: none;
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    padding-top: 2rem;
-    font-weight: bold;
-}
+    <!-- you will need these styles and scripts to use prism snippets -->
+    <script src='../lib/prism/prism.js'></script>
+    <script src='../lib/prism/toolbar-buttons.js'></script>
+    <link rel="stylesheet" href="../lib/prism/prism.css">
 
-nav ul li {
-    list-style: none;
-    display: inline-block;
-    width: calc(100% / 4);
-    height: 80px;
-    text-align: center;
-}
+</head>
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-#logo {
-    font-weight: bold;
-    font-size: 40px;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-}
-
-#sub {
-    font-size: 20px;
-}
-
-footer {
-    background-color: #E43946;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-footer ul {
-    display: flex;
-    flex-direction: row;
-    padding-left: 20%;
-    padding-right: 20%;
-}
-
-footer ul li {
-    margin: auto;
-    display: inline;
-    padding: 1rem;
-    font-weight: bold;
-    text-align: center;
-}
-
-footer ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    background-color: #1D3557;
-}
-
-.container {}
-
-nav {
-    display: grid;
-    grid-template-columns: 15% 85%;
-}
-
-nav div:nth-child(1) {
-    background-color: #457B9D;
-}
-
-nav div:nth-child(2) {
-    background-color: #E43946;
-}
-
-nav ul {
-    list-style: none;
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    padding-top: 2rem;
-    font-weight: bold;
-}
-
-nav ul li {
-    list-style: none;
-    display: inline-block;
-    width: calc(100% / 4);
-    height: 80px;
-    text-align: center;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-#logo {
-    font-weight: bold;
-    font-size: 40px;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-}
-
-#sub {
-    font-size: 20px;
-}
-
-footer {
-    background-color: #E43946;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-footer ul {
-    display: flex;
-    flex-direction: row;
-    padding-left: 20%;
-    padding-right: 20%;
-}
-
-footer ul li {
-    margin: auto;
-    display: inline;
-    padding: 1rem;
-    font-weight: bold;
-    text-align: center;
-}
-
-footer ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-#email {
-    padding: 10px 60px;
-    border-radius: 8px;
-    border-color: white;
-}
-
-#subscribe {
-    background-color: #457B9D;
-    padding: 7px 40px;
-    color: white;
-    font-size: 20px;
-    border-radius: 8px;
-    box-shadow: 7px 6px 18px rgba(0, 0, 0, 0.25);
-    border-color: #457B9D;
-}
-
-#email {
-    padding: 10px 60px;
-    border-radius: 8px;
-    border-color: white;
-}
-
-#subscribe {
-    background-color: #457B9D;
-    padding: 7px 40px;
-    color: white;
-    font-size: 20px;
-    border-radius: 8px;
-    box-shadow: 7px 6px 18px rgba(0, 0, 0, 0.25);
-    border-color: #457B9D;
-}naco/min/vs/editor/editor.main.css">
-
-
-
+<body>
+    <!-- Header section logo and links-->
+    <header>
+        <nav>
+            <div id="logo">
+                JS
+                <div id="sub">Study Guide</div>
+            </div>
+            <div class="navbar-links">
+                <ul>
+                    <li><a href="index.html">About JS</a></li>
+                    <li><a href="variables.html">Variables & Types</a></li>
+                    <li><a href="operations.html">Logic & Arithmetic</a></li>
+                    <li><a href="loops.html">Loops</a></li>
+                    <li><a href="functions.html">Functions</a></li>
+                    <li><a href="#" class="selected">Interaction</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
     <section>
         <div>
             <h1 class="h1">Interaction</h1>
-            <p class="white">If your flow is autolaunched, you can debug using a send-email element instead of a screen element, but if you<br> are building a new flow its easier to debug using screen elements and you can switch to auto launched later.</p>
+            <p class="white">If your flow is autolaunched, you can debug using a send-email element instead of a screen
+                element, but if you<br> are building a new flow its easier to debug using screen elements and you can
+                switch to auto launched later.</p>
         </div>
 
         <div class=" ">
@@ -218,10 +69,14 @@ footer ul li a {
                 <h2 class="H2">1-prompt-alert-confirm</h2>
                 <h4 class="h4">An example to prompt-alert-confirm</h4>
                 <p class="text1">
-                    <span class="comment ">// alert displays whatever you pass as an argument <br>// the value will be cast to a string  </span> <br><span class="blue ">const </span>alertMessage = <span class="orange
-                    ">'alert!'</span>; <br><span>const</span> alertValue = alert(alertMessage);<br> console.log(<span class="orange ">'alertValue:'</span>,
+                    <span class="comment ">// alert displays whatever you pass as an argument <br>// the value will be
+                        cast to a string </span> <br><span class="blue ">const </span>alertMessage = <span class="orange
+                    ">'alert!'</span>; <br><span>const</span> alertValue = alert(alertMessage);<br> console.log(<span
+                        class="orange ">'alertValue:'</span>,
                     <span class="blue ">typeof</span> alertValue, alertValue);
-                    <br><span class="blue ">if</span> (alertValue === <span class="blue ">undefined</span>) {<br> alert(<span class="orange ">'you have been alerted'</span>); <br>} <span class="blue ">else</span> {<br> <span class="comment ">// unreachable path! // alert always returns undefined </span><br>}
+                    <br><span class="blue ">if</span> (alertValue === <span class="blue ">undefined</span>) {<br>
+                    alert(<span class="orange ">'you have been alerted'</span>); <br>} <span class="blue ">else</span>
+                    {<br> <span class="comment ">// unreachable path! // alert always returns undefined </span><br>}
 
                 </p>
                 <div class="video1">
@@ -233,14 +88,23 @@ footer ul li a {
                 <h2 class="h2">2-user-flow</h2>
                 <h4 class="h4">An example to user-flow</h4>
                 <p class="text2 ">
-                    <span class="comment ">* Confirming with Boolean Input<br> when a user has just a yes/no decision with no input<br> that can be represented by a boolean value<br> */</span> <br><span class="blue ">const</span> favoriteColorInput =
+                    <span class="comment ">* Confirming with Boolean Input<br> when a user has just a yes/no decision
+                        with no input<br> that can be represented by a boolean value<br> */</span> <br><span
+                        class="blue ">const</span> favoriteColorInput =
                     prompt(
-                    <span class="orange ">'please enter your favorite color'</span>);<br> console.log(<span class="orange ">'favoriteColorInput:'</span>,
-                    <span class="blue ">typeof </span>favoriteColorInput, favoriteColorInput); <br><span class="blue ">const</span> confirmMessage = <span class="orange ">'are you sure " '</span> + favoriteColorInput + <span class="orange">'
-                    " is your favorite color?'</span>;<br> <span class="blue ">const</span> confirmedFavoriteColor = confirm(confirmMessage);<br> console.log(<span class="orange ">'confirmedFavoriteColor:'</span>,
-                    <span class="blue ">typeof </span>confirmedFavoriteColor,<br> confirmedFavoriteColor);<br> if (confirmedFavoriteColor) { <br><span class="blue ">const </span>didConfirmMessage = <span class="orange
-                    ">'nice. your favorite color is " '</span> + favoriteColorInput + <span class="orange">' "'</span>;<br> alert(didConfirmMessage);<br> } <span class="blue ">else</span> { <br>alert(<span class="orange ">'well
-                    then, what is it?'</span>); <br>}
+                    <span class="orange ">'please enter your favorite color'</span>);<br> console.log(<span
+                        class="orange ">'favoriteColorInput:'</span>,
+                    <span class="blue ">typeof </span>favoriteColorInput, favoriteColorInput); <br><span
+                        class="blue ">const</span> confirmMessage = <span class="orange ">'are you sure " '</span> +
+                    favoriteColorInput + <span class="orange">'
+                        " is your favorite color?'</span>;<br> <span class="blue ">const</span> confirmedFavoriteColor =
+                    confirm(confirmMessage);<br> console.log(<span class="orange ">'confirmedFavoriteColor:'</span>,
+                    <span class="blue ">typeof </span>confirmedFavoriteColor,<br> confirmedFavoriteColor);<br> if
+                    (confirmedFavoriteColor) { <br><span class="blue ">const </span>didConfirmMessage = <span class="orange
+                    ">'nice. your favorite color is " '</span> + favoriteColorInput + <span class="orange">'
+                        "'</span>;<br> alert(didConfirmMessage);<br> } <span class="blue ">else</span> { <br>alert(<span
+                        class="orange ">'well
+                        then, what is it?'</span>); <br>}
                 </p>
                 <div class="video2">
                     <a href="https://www.youtube.com/watch?v=V-TKtkouZlk ">video</a>
@@ -249,62 +113,21 @@ footer ul li a {
         </div>
 
     </section>
-
-    <script src='./lib/prettier/standalone.js'></script>
-    <script src='./lib/prettier/parser-babel.js'></script>
-
-    <script>
-        var require = {
-            paths: {
-                'vs': './lib/monaco/min/vs'
-            }
-        };
-    </script>
-    <script src="./lib/monaco/min/vs/loader.js"></script>
-    <script src="./lib/monaco/min/vs/editor/editor.main.nls.js"></script>
-    <script src="./lib/monaco/min/vs/editor/editor.main.js"></script>
-
-    <script src='./lib/wc-code-along.js'></script>
-
-    <script src='./lib/evaluation-buttons.js'></script>
-
-</head>
-
-<body>
-    <!-- Header section logo and links-->
-    <div class="container">
-        <nav>
-            <div id="logo">
-                JS
-                <div id="sub">
-                    Study Guide
-                </div>
-            </div>
-            <div class="navbar-links">
-                <ul>
-                    <li><a href="#">About JS</a></li>
-                    <li><a href="#">Variables & Types</a></li>
-                    <li><a href="#">Logic & Arithmetic</a></li>
-                    <li><a href="#">Loops</a></li>
-                    <li><a href="#">Functions</a></li>
-                    <li><a href="#">Interaction</a></li>
-                </ul>
-            </div>
-        </nav>
-        <!--fixed footer-->
-        <footer>
-            <div class="container">
-
-                <ul>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><input id="email" type="text" placeholder="Enter Your E-mail" name="mail" required>
-                        <input id="subscribe" type="submit" value="Subscribe">
-                    </li>
-                </ul>
-
-            </div>
-        </footer>
+    <div class="gutter">
+    </div>
+    <!-- footer -->
+    <footer>
+        <div class="container">
+            <ul class="text-shadow">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li>
+                    <input id="email" type="text" placeholder="Enter Your E-mail" name="mail" required />
+                </li>
+                <li><input id="subscribe" type="submit" value="Subscribe" /></li>
+            </ul>
+        </div>
+    </footer>
 </body>
 
 </html>
