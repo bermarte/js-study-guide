@@ -282,6 +282,8 @@ hr {
   height: 100%;
 }
 
+/* Bermarte's section */
+
 #ul-conditionals{
   line-height: 2.5rem;
 }
@@ -290,6 +292,211 @@ hr {
   background-color: rgb(195, 195, 195);
   border-radius: 25px;
   padding: 0px 6px;
+}
+
+/*patrick section on css*/
+
+.orange {
+  color: orange;
+}
+
+.orange-background {
+  background: orange;
+}
+
+.comment {
+  color: green;
+}
+
+.comment-background {
+  background: green;
+}
+
+.blue {
+  color: blue;
+}
+
+.blue-background {
+  background: blue;
+}
+
+.text1 {
+  background: #1d3557;
+  color: #fff;
+  padding: 20px;
+  position: absolute;
+  width: 950px;
+  height: 663px;
+  margin-left: 181px;
+  margin-top: 965px;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 250%;
+  align-items: center;
+  margin-top: 20px;
+  font-weight: bolder;
+}
+
+.text2 {
+  background: #1d3557;
+  color: #fff;
+  padding: 20px;
+  position: absolute;
+  width: 1141px;
+  height: 933px;
+  margin-left: 181px;
+  margin-top: 5145px;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 250%;
+  align-items: center;
+  margin-top: 20px;
+  font-weight: bolder;
+}
+
+.white {
+  color: white;
+  font-size: 24px;
+  position: absolute;
+  width: 1367px;
+  margin-left: 44px;
+  margin-top: 381px;
+  line-height: 200%;
+  font-style: normal;
+  font-weight: bolder;
+}
+
+.H2 {
+  color: #173ea3;
+  margin-left: 10ch;
+  margin-top: 15ch;
+  padding: 20px;
+}
+
+.H1 {
+  color: white;
+  position: absolute;
+  width: 237px;
+  height: 20.34px;
+  color: white;
+}
+
+.video1 a {
+  left: 27px;
+  top: 300px;
+}
+
+.h4 {
+  color: black;
+  margin-left: 20ch;
+  margin-bottom: 5ch;
+}
+
+.col1 {
+  width: 1382px;
+  height: 1198px;
+  margin-left: 29px;
+  margin-top: 549px;
+  background: #c4c4c4;
+  border-radius: 21px;
+}
+
+.col2 {
+  width: 1382px;
+  height: 1454px;
+  margin-left: 29px;
+  top: 1845px;
+  background: #c4c4c4;
+  border-radius: 21px;
+}
+
+.video1 {
+  background: #1d3557;
+  color: white;
+  margin-left: 140ch;
+  margin-top: 130ch;
+  width: 143px;
+  height: 33px;
+  top: 1662px;
+  left: 1207px;
+  border-radius: 21px;
+  text-align: flex;
+}
+
+.video2 {
+  background: #1d3557;
+  color: white;
+  margin-left: 140ch;
+  margin-top: 160ch;
+  width: 143px;
+  height: 34px;
+  top: 3195px;
+  left: 1211px;
+  border-radius: 21px;
+  text-align: flex;
+}
+
+.video1 a {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
+.video2 a {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  align-items: center;
+  left: 1211px;
+  top: 3195px;
+}
+
+/*Divya's section(loops)*/
+
+.loop-wrap {
+  margin: 3rem;
+  position: relative;
+  width: auto;
+  height: auto;
+
+  padding: 5rem;
+
+  background: #d6d6d7;
+  border-radius: 21px;
+}
+.loop-text-wrap {
+  margin: 4rem;
+}
+
+.code-example {
+  width: auto;
+  text-align: left;
+}
+
+.header-links {
+  background-color: #ffc800;
+}
+
+.header-links ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.header-links ul li {
+  display: inline;
+  width: calc(100% / 4);
+  text-align: center;
+  padding: 1rem;
+  font-weight: bold;
+}
+.header-links a {
+  text-decoration: none;
+  color: black;
+}
+
+.header-links ul li a:hover {
+  color: red;
 }
 
 @media only screen and (max-width: 600px) {
