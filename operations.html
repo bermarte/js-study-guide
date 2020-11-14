@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>JS Study Guide - logic</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="css/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- you will need these styles and scripts -->
+  <!-- if you create new .html files, copy them into the head -->
+  <!-- if those files are in a folder, be sure to adjust all the paths! -->
+  <link rel="stylesheet" data-name="vs/editor/editor.main" href="./lib/monaco/min/vs/editor/editor.main.css" />
+
+  <script src="./lib/prettier/standalone.js"></script>
+  <script src="./lib/prettier/parser-babel.js"></script>
+
+  <script>
+    var require = {
+      paths: {
+        vs: "./lib/monaco/min/vs"
+      }
+    };
+  </script>
+  <script src="./lib/monaco/min/vs/loader.js"></script>
+  <script src="./lib/monaco/min/vs/editor/editor.main.nls.js"></script>
+  <script src="./lib/monaco/min/vs/editor/editor.main.js"></script>
+
+  <script src="./lib/wc-code-along.js"></script>
+
+  <script src="./lib/evaluation-buttons.js"></script>
+
+  <!-- you will need these styles and scripts to use prism snippets -->
+  <script src='../lib/prism/prism.js'></script>
+  <script src='../lib/prism/toolbar-buttons.js'></script>
+  <link rel="stylesheet" href="../lib/prism/prism.css">
+
+</head>
+
+<body>
+  <!-- Header section logo and links-->
+  <header>
+    <nav>
+      <div id="logo">
+        JS
+        <div id="sub">Study Guide</div>
+      </div>
+      <div class="navbar-links">
+        <ul>
+          <li><a href="index.html">About JS</a></li>
+          <li><a href="variables.html">Variables & Types</a></li>
+          <li><a href="#" class="selected">Logic & Arithmetic</a></li>
+          <li><a href="loops.html">Loops</a></li>
+          <li><a href="functions.html">Functions</a></li>
+          <li><a href="alert.html">Interaction</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- breadcrumb -->
+  <div class="breadcrumb">
+    <nav>
+      <ul>
+        <li><a href="#operators">Logical operators</a></li>
+        <li><a href="#block">Block scope</a></li>
+        <li><a href="#conditionals">Conditionals</a></li>
+        <li><a href="#comparisons">Comparisons</a></li>
+        <li><a href="#arithmetic">Arithmetic</a></li>
+      </ul>
+    </nav>
+  </div>
+  <!--content -->
+  <main>
+
+    <!-- logic -->
+    <div class="container">
+      <h1>Logic and Arithmetic</h1>
+    </div>
+
+    <div class="guide">
+      <div class="guide-paragraph">
+        <h2>Logic</h2>
+        <p id="logic">
+          The study of the principles of reasoning, especially of the structure
+          of propositions as distinguished from their content and of method and
+          validity in deductive reasoning.
+        </p>
+        <div class="iframe-container">
+          <iframe src="https://www.youtube.com/embed/s16xd9XyDnY"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="container-label">
+        <div class="label" id="operators">Logical operators</div>
+      </div>
+
+      <div class="guide-paragraph">
+        <!-- AND -->
+        <!-- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND -->
+        <h2>Logic AND (&&)</h2>
+        <p>
+          The logical AND (&&) operator (logical conjunction) for a set of operands is true if and only if all of its
+          operands are true. It is typically used with Boolean (logical) values. When it is, it returns a Boolean value.
+          However, the && operator actually returns the value of one of the specified operands, so if this operator is
+          used with non-Boolean values, it will return a non-Boolean value.
+        </p>
+
+        <div class="code">
+          <div class='snippet'>
+            <pre class='line-numbers' data-src='./snippets/and_operand.js' eval js-tutor></pre>
+          </div>
+        </div>
+
+        <p>
+          If a value can be converted to true, the value is so-called truthy. If a value can be converted to false, the
+          value is so-called falsy.
+        </p>
+      </div>
+      <hr>
+
+      <div class="guide-paragraph">
+        <h2>Logic OR (||)</h2>
+        <p>
+          The logical OR (||) operator (logical disjunction) for a set of operands is true if and only if one or more of
+          its operands is true. It is typically used with Boolean (logical) values. When it is, it returns a Boolean
+          value. However, the || operator actually returns the value of one of the specified operands, so if this
+          operator is used with non-Boolean values, it will return a non-Boolean value.
+        </p>
+
+        <div class="code">
+          <div class='snippet'>
+            <pre class='line-numbers' data-src='./snippets/or_operand.js' eval js-tutor></pre>
+          </div>
+        </div>
+
+      </div>
+
+      <hr>
+
+      <div class="guide-paragraph">
+        <h2>Logical NOT (!)</h2>
+        <p>
+          The logical NOT (!) operator (logical complement, negation) takes truth to falsity and vice versa. It is
+          typically used with Boolean (logical) values. When used with non-Boolean values, it returns false if its
+          single operand can be converted to true; otherwise, returns true.
+        </p>
+
+        <div class="code">
+          <div class='snippet'>
+            <pre class='line-numbers' data-src='./snippets/not_operand.js' eval js-tutor></pre>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="container">
+      <h1>What is Scope?</h1>
+    </div>
+    <div class="guide">
+      <div class="guide-paragraph">
+        <h2>Scope</h2>
+        <!--https://dev.to/sandy8111112004/javascript-introduction-to-scope-function-scope-block-scope-d11 -->
+        <p id="scope">
+          Scope determines the visibility or accessibility of a variable or other resource in the area of your code.
+        </p>
+
+        <div class="iframe-container">
+          <iframe src="https://www.youtube.com/embed/iJKkZA215tQ"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="container-label">
+        <!-- block scope -->
+        <div class="label" id="block">Block Scope</div>
+      </div>
+      <div class="guide-paragraph">
+        <p>
+          Generally speaking, whenever you
+          see {curly brackets}, it is a block. In ES6, const and let keywords allow developers to declare variables in
+          the
+          block scope, which means those variables exist only within the corresponding block.
+        </p>
+
+        <div class="code">
+          <div class='snippet'>
+            <pre class='line-numbers' data-src='./snippets/block_scope.js' eval js-tutor></pre>
+          </div>
+        </div>
+
+      </div>
+
+      <hr>
+
+      <!-- global scope -->
+      <div class="guide-paragraph">
+        <h2>Global scope</h2>
+        <p>
+          There's only one Global scope in the JavaScript document. The area outside all the functions is consider the
+          global scope and the variables defined inside the global scope can be accessed and altered in any other
+          scopes.
+        </p>
+
+        <div class="code">
+          <div class='snippet'>
+            <pre class='line-numbers' data-src='./snippets/global_scope.js' eval js-tutor></pre>
+          </div>
+        </div>
+
+      </div>
+
+      <hr>
+
+      <!-- local scope -->
+      <div class="guide-paragraph">
+        <h2>Local scope</h2>
+        <p>
+          Variables declared inside the functions become Local to the function and are considered in the corresponding
+          local scope. Every Functions has its own scope. Same variable can be used in different functions because they
+          are bound to the respective functions and are not mutual visible.
+        </p>
+
+        <div class="code">
+          <div class='snippet'>
+            <pre class='line-numbers' data-src='./snippets/local_scope.js' eval js-tutor></pre>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- conditionsls -->
+
+    <div class="container">
+      <h1>Decision Making</h1>
+    </div>
+
+    <div class="guide">
+      <div class="guide-paragraph">
+        <h2>Code flow</h2>
+        <p>
+          <!-- https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals -->
+          In any programming language, the code needs to make decisions and carry out actions accordingly depending on
+          different inputs. For example, in a game, if the player's number of lives is 0, then it's game over. In a
+          weather app, if it is being looked at in the morning, show a sunrise graphic; show stars and a moon if it is
+          nighttime.
+        </p>
+
+        <div class="iframe-container">
+          <iframe src="https://www.youtube.com/embed/qdr6XgYYH7I"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+
+        <p>
+          <!-- https://www.lynda.com/JavaScript-tutorials/Making-decisions-code/779751/2231148-4.html -->
+          Making decisions in your code: Conditionals; by means of Boolean expressions you can make decisions in your
+          code.
+        </p>
+      </div>
+
+      <hr>
+
+      <div class="container-label">
+        <!-- conditionals -->
+        <div class="label" id="conditionals">Conditionals</div>
+      </div>
+
+      <div class="guide-paragraph">
+        <p>
+          <!-- https://www.w3schools.com/js/js_if_else.asp -->
+          In JavaScript we have the following conditional statements:
+        </p>
+
+        <ul id="ul-conditionals">
+          <li>Use <span class="term">if</span> to specify a block of code to be executed, if a specified condition is
+            true</li>
+          <li>Use <span class="term">else</span> to specify a block of code to be executed, if the same condition is
+            false</li>
+          <li>Use <span class="term">else if</span> to specify a new condition to test, if the first condition is
+            false</li>
+          <li>Use <span class="term">switch</span> to specify many alternative blocks of code to be executed</li>
+          <li>Use ternary operator as a shortened version of the conditional statement</li>
+        </ul>
+
+      </div>
+      <hr>
+      <!-- if -->
+      <div class="guide-paragraph">
+        <h2>If</h2>
+        <p>
+          The if statement executes a statement if a specified condition is truthy. You can have more if statements
+          one after the other.
+        </p>
+
+        <div class="code">
+          <div class='snippet'>
+            <pre class='line-numbers' data-src='./snippets/if.js' eval js-tutor></pre>
+          </div>
+        </div>
+
+      </div>
+
+      <hr>
+
+      <!-- else -->
+      <div class="guide-paragraph">
+        <h2>Else</h2>
+        <p>
+          The if statement executes a statement if a specified condition is truthy. If the condition is falsy,
+          another statement can be executed.
+        </p>
+
+        <div class="code">
+          <div class='snippet'>
+            <pre class='line-numbers' data-src='./snippets/if_else.js' eval js-tutor></pre>
+          </div>
+        </div>
+
+      </div>
+
+      <hr>
+
+      <!-- Else if -->
+      <div class="guide-paragraph">
+        <h2>Else if</h2>
+        <p>
+          Use else if to specify a new condition to test, if the first if condition is false.
+        </p>
+
+        <div class="code">
+          <div class='snippet'>
+            <pre class='line-numbers' data-src='./snippets/else_if.js' eval js-tutor></pre>
+          </div>
+        </div>
+
+      </div>
+
+
+      <hr>
+
+      <!-- Switch -->
+      <div class="guide-paragraph">
+        <h2>Switch</h2>
+        <!-- https://www.w3schools.com/Jsref/jsref_switch.asp -->
+        <p>
+          The switch statement is a part of JavaScript's "Conditional" Statements, which are used to perform
+          different actions based on different conditions. Use switch to select one of many blocks of code to be
+          executed. This is the perfect solution for long, nested if/else statements.
+        </p>
+        <p>
+          The switch statement evaluates an expression. The value of the expression is then compared with the
+          values of each case in the structure. If there is a match, the associated block of code is executed.
+        </p>
+        <p>
+          The switch statement is often used together with a break or a default keyword (or both). These are
+          both optional:
+        </p>
+        <p>
+          The <span class="term">break</span> keyword breaks out of the switch block. This will stop the
+          execution of more execution of
+          code and/or case testing inside the block. If break is omitted, the next code block in the switch
+          statement is executed.
+        </p>
+        <p>
+          The <span class="term">default</span> keyword specifies some code to run if there is no case match.
+          There can only be one
+          default keyword in a switch. Although this is optional, it is recommended that you use it, as it takes
+          care of unexpected cases.
+        </p>
+
+        <div class="code">
+          <div class='snippet'>
+            <pre class='line-numbers' data-src='./snippets/switch.js' eval js-tutor></pre>
+          </div>
+        </div>
+
+      </div>
+
+
+      <hr>
+
+      <!-- Ternary operator -->
+      <!-- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator -->
+      <div class="guide-paragraph">
+        <h2>Ternary Operator</h2>
+        <p>
+          The conditional (ternary) operator is the only JavaScript operator that takes three operands: a
+          condition followed by a question mark (?), then an expression to execute if the condition is truthy
+          followed by a colon (:), and finally the expression to execute if the condition is falsy. This
+          operator is frequently used as a shortcut for the if statement. It is used often in React to inject
+          conditionals in components.
+        </p>
+
+        <div class="code">
+          <div class='snippet'>
+            <pre class='line-numbers' data-src='./snippets/ternary_operator.js' eval js-tutor></pre>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <!-- comparisons -->
+    <div class="container">
+      <h1>Comparing Values</h1>
+    </div>
+
+    <div class="guide">
+      <div class="guide-paragraph">
+        <h2>Comparing values</h2>
+        <p id="comparing">
+          Comparison operators are used in logical statements to determine equality or difference between variables or
+          values.
+        </p>
+        <div class="iframe-container">
+          <iframe src="https://www.youtube.com/embed/Uw4FiGnQHAI"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="container-label">
+        <div class="label" id="comparisons">Comparisons</div>
+      </div>
+
+      <div class="guide-paragraph">
+
+        <h2>Loose equality</h2>
+        <!-- https://javascript.info/comparison -->
+        <p>
+          Loose equality compares two values for equality, after converting both values to a common type.</p>
+        <p>
+          Please note that loose equality: <span class="term"> a == b </span> is different from the assignment <span
+            class="term"> a = b </span>.</p>
+        <p>
+          Note also that <span class="term"> a == b </span> and <span class="term"> b == a </span>are the same.
+        </p>
+
+        <div class="code">
+          <div class='snippet'>
+            <pre class='line-numbers' data-src='./snippets/equality.js' eval js-tutor></pre>
+          </div>
+        </div>
+
+      </div>
+
+      <hr>
+
+      <div class="guide-paragraph">
+
+        <h2>Strict equality</h2>
+        <!-- https://javascript.info/comparison -->
+        <p>
+          Strict equality compares two values for equality. Neither value is implicitly converted to some other value
+          before being compared. Values and types must be equal.
+        </p>
+
+        <div class="code">
+          <div class='snippet'>
+            <pre class='line-numbers' data-src='./snippets/strict_equality.js' eval js-tutor></pre>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- inequalities -->
+
+      <hr>
+
+      <div class="guide-paragraph">
+
+        <h2>Inequalities</h2>
+        <!-- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Inequality -->
+        <p>
+          The inequality operator (!=) checks whether its two operands are not equal, returning a Boolean result, it
+          attempts to convert and compare operands that are of different types.
+        </p>
+        <p></p>
+        The strict inequality operator (!==), doesn't, so values and types must be the same; the strict inequality
+        operator always considers operands of different types to be different.
+        </p>
+
+        <div class="code">
+          <div class='snippet'>
+            <pre class='line-numbers' data-src='./snippets/inequalities.js' eval js-tutor></pre>
+          </div>
+        </div>
+
+      </div>
+      <!-- greater and smaller than operators -->
+
+      <hr>
+
+      <div class="guide-paragraph">
+
+        <h2>Greater and smaller than operators</h2>
+        <!-- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Inequality -->
+        <p>
+          These comparison operators are also used in logical statements to determine equality or difference between
+          variables or values.
+        </p>
+        <p>
+          Like logical operators, comparison operators can be used in conditional statements to compare values and take
+          action depending on the results.
+        </p>
+        <ul>
+          <li>greater than <span class="term"> > </span></li>
+          <li>less than <span class="term">
+              < </span> </li> <li>greater than or equal to <span class="term"> >= </span></li>
+          <li>less than or equal to <span class="term">
+              <= </span> </li> </ul> <p>
+                <!-- https://www.w3schools.com/js/js_comparisons.asp -->
+                When comparing a string with a number, JavaScript will convert the string to a number when doing the
+                comparison. An empty string converts to 0. A non-numeric string converts to NaN which is always false.
+                </p>
+                <p>
+                  When comparing two strings, "2" will be greater than "12", because (alphabetically) 1 is less than 2.
+                </p>
+
+                <div class="code">
+                  <div class='snippet'>
+                    <pre class='line-numbers' data-src='./snippets/greater_smaller.js' eval js-tutor></pre>
+                  </div>
+                </div>
+
+      </div>
+
+    </div>
+
+    <!-- arithmetic -->
+    <div class="container">
+      <h1>Arithmetic operators</h1>
+    </div>
+
+    <div class="guide">
+      <div class="guide-paragraph">
+        <h2>Arithmetic operators</h2>
+        <p id="counting">
+          Writing math expressions is what programmers will ultimately do when creating more complex applications.
+        </p>
+        <div class="iframe-container">
+          <iframe src="https://www.youtube.com/embed/v-L5v6GEFcY"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="container-label">
+        <div class="label" id="arithmetic">Arithmetic</div>
+      </div>
+
+      <div class="guide-paragraph">
+        <p>
+          Arithmetic operators take numerical values (either literals or variables) as their operands and return a
+          single numerical value. The standard arithmetic operators are addition, subtraction, multiplication and
+          division.
+        </p>
+        <p>
+          Modulus (%) operator returns only the remainder.
+          If either value is a string, an attempt is made to convert the string to a number.
+        </p>
+        <div class="code">
+          <div class='snippet'>
+            <pre class='line-numbers' data-src='./snippets/arithmetic.js' eval js-tutor></pre>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="guide-paragraph">
+        <!-- https://en.wikipedia.org/wiki/Counting -->
+        <h2>Counting</h2>
+        <p>
+          Counting is the process of determining the number of elements of a finite set of objects. The traditional way
+          of counting consists of continually increasing a (mental or spoken) counter by a unit for every element of the
+          set.
+        </p>
+
+        <h2>Increment and decrement operators</h2>
+        <p>
+          <!-- https://www.tutorialgateway.org/increment-and-decrement-operators-in-javascript/ -->
+          The JavaScript Increment and Decrement Operators useful to increase or decrease the value by 1. For instance,
+          Incremental operator (++) is used to increase the existing variable value by 1 (x = x + 1). The decrement
+          operator
+          (– –) is used to decrease or subtract the existing value by 1 (x = x – 1).
+        </p>
+
+        <div class="iframe-container">
+          <iframe src="https://www.youtube.com/embed/d4W6-mphL7c"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+
+        <div class="term">
+          <pre>
+
+          let var1 = 5, var2 = 5;
+          // var1 is displayed, then var1 is increased to 6
+          console.log(var1++)
+ 
+          // var2 is increased to 6, then var2 is displayed
+          console.log(++var2)
+       
+        </pre>
+        </div>
+
+        <p>
+          Increment and decrement operators (prefix and postfix) are usually used in loops and for cycles.
+        </p>
+
+        <div class="code">
+          <div class='snippet'>
+            <pre class='line-numbers' data-src='./snippets/increment_decrement.js' eval js-tutor></pre>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- exercise -->
+    <!-- arithmetic -->
+    <div class="container">
+      <h1>Consolidation exercise</h1>
+    </div>
+
+    <div class="guide">
+      <div class="guide-paragraph">
+        <h2>Mixed exercise</h2>
+        <p id="counting">
+          Fill in the empty spaces using js tutor. Js tutor should not stop when encountering console.assert.
+          Console.assert Writes an error message to the console if the assertion is false. If the assertion is true,
+          nothing happens.
+        </p>
+
+        <div class="code">
+          <div class='snippet'>
+            <pre class='line-numbers' data-src='./snippets/operations_exercise.js' eval js-tutor></pre>
+          </div>
+        </div>
+
+      </div>
+
+  </main>
+  <div class="gutter">
+  </div>
+  <!-- footer -->
+  <footer>
+    <div class="container">
+      <ul class="text-shadow">
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li>
+          <input id="email" type="text" placeholder="Enter Your E-mail" name="mail" required />
+        </li>
+        <li><input id="subscribe" type="submit" value="Subscribe" /></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+
+</html>

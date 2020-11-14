@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Code-Alongs</title>
+
+
+  <style>
+    /* some demo styling */
+    .code-example {
+      width: 93vw;
+    }
+  </style>
+
+
+  <!-- you will need these styles and scripts to use <code-along> -->
+  <script src='../lib/prettier/standalone.js'></script>
+  <script src='../lib/prettier/parser-babel.js'></script>
+
+  <link rel="stylesheet" data-name="vs/editor/editor.main" href="../lib/monaco/min/vs/editor/editor.main.css">
+
+  <script>var require = { paths: { 'vs': '../lib/monaco/min/vs' } };</script>
+  <script src="../lib/monaco/min/vs/loader.js"></script>
+  <script src="../lib/monaco/min/vs/editor/editor.main.nls.js"></script>
+  <script src="../lib/monaco/min/vs/editor/editor.main.js"></script>
+
+  <script src='../lib/wc-code-along.js'></script>
+
+
+</head>
+
+<body>
+
+
+  <code-along src='./snippets/conditional.js' class='code-example'></code-along>
+
+  <hr>
+
+  <code-along src='./snippets/while-loop.js' loop-guard class='code-example'></code-along>
+
+  <hr>
+
+  <code-along src='./snippets/for-loop.js' js-tutor loop-guard class='code-example'></code-along>
+
+  <hr>
+
+  <code-along src='./snippets/function.js' js-tutor class='code-example'></code-along>
+
+
+</body>
+
+</html>
