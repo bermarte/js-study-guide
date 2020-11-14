@@ -564,28 +564,97 @@
       </div>
 
       <div class="guide-paragraph">
-        <!-- AND -->
-        <!-- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND -->
-        <h2>Counting</h2>
         <p>
-          arithmetic ABC text
+          Arithmetic operators take numerical values (either literals or variables) as their operands and return a
+          single numerical value. The standard arithmetic operators are addition, subtraction, multiplication and
+          division.
         </p>
-
+        <p>
+          Modulus (%) operator returns only the remainder.
+          If either value is a string, an attempt is made to convert the string to a number.
+        </p>
         <div class="code">
           <div class='snippet'>
             <pre class='line-numbers' data-src='./snippets/arithmetic.js' eval js-tutor></pre>
           </div>
         </div>
-
-        <p>
-          If a value can be converted to true, the value is so-called truthy. If a value can be converted to false, the
-          value is so-called falsy.
-        </p>
-
       </div>
 
       <hr>
+
+      <div class="guide-paragraph">
+        <!-- https://en.wikipedia.org/wiki/Counting -->
+        <h2>Counting</h2>
+        <p>
+          Counting is the process of determining the number of elements of a finite set of objects. The traditional way
+          of counting consists of continually increasing a (mental or spoken) counter by a unit for every element of the
+          set.
+        </p>
+
+        <h2>Increment and decrement operators</h2>
+        <p>
+          <!-- https://www.tutorialgateway.org/increment-and-decrement-operators-in-javascript/ -->
+          The JavaScript Increment and Decrement Operators useful to increase or decrease the value by 1. For instance,
+          Incremental operator (++) is used to increase the existing variable value by 1 (x = x + 1). The decrement
+          operator
+          (– –) is used to decrease or subtract the existing value by 1 (x = x – 1).
+        </p>
+
+        <div class="iframe-container">
+          <iframe src="https://www.youtube.com/embed/d4W6-mphL7c"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+
+        <div class="term">
+          <pre>
+
+          let var1 = 5, var2 = 5;
+          // var1 is displayed, then var1 is increased to 6
+          console.log(var1++)
+ 
+          // var2 is increased to 6, then var2 is displayed
+          console.log(++var2)
+       
+        </pre>
+        </div>
+
+        <p>
+          Increment and decrement operators (prefix and postfix) are usually used in loops and for cycles.
+        </p>
+
+        <div class="code">
+          <div class='snippet'>
+            <pre class='line-numbers' data-src='./snippets/increment_decrement.js' eval js-tutor></pre>
+          </div>
+        </div>
+
+      </div>
+
     </div>
+
+    <!-- exercise -->
+    <!-- arithmetic -->
+    <div class="container">
+      <h1>Consolidation exercise</h1>
+    </div>
+
+    <div class="guide">
+      <div class="guide-paragraph">
+        <h2>Mixed exercise</h2>
+        <p id="counting">
+          Fill in the empty spaces using js tutor. Js tutor should not stop when encountering console.assert.
+          Console.assert Writes an error message to the console if the assertion is false. If the assertion is true,
+          nothing happens.
+        </p>
+
+        <div class="code">
+          <div class='snippet'>
+            <pre class='line-numbers' data-src='./snippets/operations_exercise.js' eval js-tutor></pre>
+          </div>
+        </div>
+
+      </div>
 
   </main>
   <div class="gutter">
